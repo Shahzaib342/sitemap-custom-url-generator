@@ -5,8 +5,8 @@
 
 function addCustomURL() {
 
-    var url = $('input[name=url]').val();
-    $.ajax({
+    var url = jQuery('input[name=url]').val();
+    jQuery.ajax({
         type: 'POST',
         url: ajaxurl,
         data: {

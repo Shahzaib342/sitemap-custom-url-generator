@@ -17,7 +17,6 @@ class Enqueue extends BaseController
     function enqueue()
     {
         wp_enqueue_style('mypluginstyle',$this->plugin_url .('assets/style.css'));
-        wp_enqueue_script( 'jQuery', $this->plugin_url .('assets/jQuery.min.js'), array( 'jquery' ));
         wp_enqueue_script('mypluginscript',$this->plugin_url.('assets/plugin.js'));
         wp_localize_script( 'mypluginscript', 'my_ajax_object',
             array( 'ajax_url' => admin_url( 'admin-ajax.php' )));
