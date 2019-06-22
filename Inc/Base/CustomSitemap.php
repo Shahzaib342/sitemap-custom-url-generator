@@ -14,7 +14,7 @@ class CustomSitemap
     public static function CustomSitemap()
     {
         global $wpdb;
-        $table_name = 'wp_sitemap_custom_url_generator';
+        $table_name = $wpdb->prefix.'sitemap_custom_url_generator';
         $results = $wpdb->get_results( "SELECT * FROM $table_name");
 
         global $wpseo_sitemaps;
